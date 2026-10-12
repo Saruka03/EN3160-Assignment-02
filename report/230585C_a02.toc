@@ -1,0 +1,18 @@
+\contentsline {section}{\numberline {1}Question 1: Blob Detection Using LoG}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Objective}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Methodology}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Results}{2}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Discussion}{3}{subsection.1.4}%
+\contentsline {section}{\numberline {2}Question 2: RANSAC Line and Circle Fitting}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Objective}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Line Fitting Using RANSAC}{4}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Line Model}{4}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Procedure}{4}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Line Results}{4}{subsubsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.3}Circle Fitting Using RANSAC}{5}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Circle Model}{5}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Procedure}{5}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Circle Results}{5}{subsubsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.4}Combined Results}{6}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}What If the Circle Is Fitted First?}{7}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Discussion}{7}{subsection.2.6}%
