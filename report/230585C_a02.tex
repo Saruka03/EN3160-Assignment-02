@@ -6,12 +6,14 @@
 \usepackage{booktabs}
 \usepackage{float}
 \usepackage{wrapfig}
+\usepackage{caption}
 \usepackage{xcolor}
 \usepackage{listings}
 \usepackage{hyperref}
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{3pt}
+\captionsetup[table]{justification=raggedright,singlelinecheck=false}
 \hypersetup{colorlinks=true,urlcolor=blue}
 
 \lstset{
@@ -38,7 +40,7 @@
 % ============================================================
 \section*{1. Blob Detection in the Sunflower Image}
 
-\begin{wrapfigure}{r}{0.40\textwidth}
+\begin{wrapfigure}[16]{r}{0.40\textwidth}
    % \centering
     \vspace{-10pt}
     \includegraphics[width=0.38\textwidth]
@@ -68,7 +70,8 @@ radius was calculated using $r=\sqrt{2}\sigma$.
 
 \begin{table}[H]
     \small
-    %\caption{Five largest detected circles.}
+    \raggedright
+    \caption{Five largest detected circles.}
     \label{tab:largest-circles}
     \begin{tabular}{ccccc}
         \toprule
@@ -161,5 +164,98 @@ radial_error = np.abs(
 )
 circle_inliers = radial_error < 1.2
 \end{lstlisting}
+
+\section*{3. Homography and Image Compositing}
+
+\begin{wrapfigure}{r}{0.43\textwidth}
+    \vspace{-10pt}
+    \includegraphics[width=0.30\textwidth]
+    {../outputs/q3_flag_composite.png}
+    \caption{Architectural image with the British flag superimposed.}
+    \label{fig:q3-composite}
+    \vspace{4pt}
+    \includegraphics[width=0.3\textwidth]
+    {../outputs/q3_warped_flag.png}
+    \captionof{figure}{Flag after perspective warping.}
+    \label{fig:q3-warped}
+    \vspace{-10pt}
+\end{wrapfigure}
+
+The British flag was projected onto a planar region of the architectural image using a homography transformation. Four corresponding corner points were selected manually in the background image, and the homography matrix was computed to map the flag image onto the selected region.
+
+The estimated homography matrix was
+
+\[
+H =
+\begin{bmatrix}
+0.17895975 & 0.00881057 & 301.00000000\\
+-0.01704851 & 0.20405100 & 276.00000000\\
+-0.00003723 & 0.00000152 & 1.00000000
+\end{bmatrix}.
+\]
+
+The flag image was warped using this matrix and composited with the original architectural image. Figure~\ref{fig:q3-composite} shows the resulting composite, while Figure~\ref{fig:q3-warped} shows the warped flag.
+
+The results demonstrate that a homography can map an image onto a selected planar region in another image. The alignment depends on the accuracy of the selected corner points. Although the flag is successfully projected onto the building, the result does not reproduce the surface texture, lighting, or shadows of the architecture.
+
+\section*{4. PCB Image Alignment and Difference Calculation}
+
+The PCB images AECC2, AECC3, and AECC4 were aligned with the reference template AECC1.jpg using SIFT feature detection, feature matching, and RANSAC-based homography estimation. The aligned images were then compared with the reference template using absolute pixel differences.
+
+\textbf{Feature Matching and Homography Estimation}
+
+The numbers of detected keypoints, good feature matches, and RANSAC inliers are summarized below.
+
+\begin{table}[H]
+\centering
+\captionsetup{justification=centering,singlelinecheck=true}
+\caption{Feature matching and RANSAC results}
+\begin{tabular}{lrrr}
+\hline
+Image & Keypoints & Good Matches & Inliers \\
+\hline
+AECC2 & 12315 & 4322 & 3847 \\
+AECC3 & 15198 & 5629 & 5006 \\
+AECC4 & 11610 & 3830 & 3402 \\
+\hline
+\end{tabular}
+\end{table}
+
+The RANSAC inlier ratios were approximately 89\% for all three images. This indicates that most of the selected feature matches were consistent with their estimated homography transformations.
+
+\textbf{Difference Images}
+
+The aligned images were compared with the reference template to obtain absolute difference images.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]
+        {../outputs/q4_AECC2_difference.png}
+        \captionof{figure}{Difference image for AECC2 relative to AECC1.}
+        \label{fig:q4-diff2}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]
+        {../outputs/q4_AECC3_difference.png}
+        \captionof{figure}{Difference image for AECC3 relative to AECC1.}
+        \label{fig:q4-diff3}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]
+        {../outputs/q4_AECC4_difference.png}
+        \captionof{figure}{Difference image for AECC4 relative to AECC1.}
+        \label{fig:q4-diff4}
+    \end{minipage}
+\end{figure}
+
+\textbf{Discussion}
+
+The difference images show residual edges and component details after perspective alignment. These differences may result from small alignment errors, variations in component positions, changes in illumination, or differences between the PCB images. A high difference around a component may indicate that its appearance or position differs from the reference, although it does not by itself establish a physical defect.
+
+All three images produced high RANSAC inlier ratios, indicating that reliable feature correspondences were available for estimating the transformations. However, the inlier ratio measures geometric agreement between matched features rather than the overall pixel similarity of the aligned images.
 
 \end{document}
