@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.4)  13 OCT 2026 15:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.4)  13 OCT 2026 16:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -490,52 +490,122 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <7> not available
 File: ../outputs/q3_flag_composite.png Graphic file (type png)
 <use ../outputs/q3_flag_composite.png>
 Package pdftex.def Info: ../outputs/q3_flag_composite.png  used on input line 1
-73.
-(pdftex.def)             Requested size: 151.93915pt x 113.94495pt.
+75.
+(pdftex.def)             Requested size: 202.58038pt x 151.92659pt.
 <../outputs/q3_warped_flag.png, id=30, 1027.84pt x 770.88pt>
 File: ../outputs/q3_warped_flag.png Graphic file (type png)
 <use ../outputs/q3_warped_flag.png>
-Package pdftex.def Info: ../outputs/q3_warped_flag.png  used on input line 178.
+Package pdftex.def Info: ../outputs/q3_warped_flag.png  used on input line 180.
 
-(pdftex.def)             Requested size: 151.93915pt x 113.94495pt.
+(pdftex.def)             Requested size: 202.58038pt x 151.92659pt.
+<../outputs/q3_ghana_composite.png, id=31, 1284.8pt x 684.5575pt>
+File: ../outputs/q3_ghana_composite.png Graphic file (type png)
+<use ../outputs/q3_ghana_composite.png>
+Package pdftex.def Info: ../outputs/q3_ghana_composite.png  used on input line 
+185.
+(pdftex.def)             Requested size: 202.58038pt x 107.93327pt.
  [2 <../outputs/q3_flag_composite.png (PNG copy)> <../outputs/q3_warped_flag.pn
-g (PNG copy)>]
-<../outputs/q4_AECC2_difference.png, id=57, 2310.6325pt x 2740.2375pt>
+g (PNG copy)> <../outputs/q3_ghana_composite.png (PNG copy)>]
+<../outputs/q4_AECC2_matches.png, id=56, 4598.17876pt x 2740.2375pt>
+File: ../outputs/q4_AECC2_matches.png Graphic file (type png)
+<use ../outputs/q4_AECC2_matches.png>
+Package pdftex.def Info: ../outputs/q4_AECC2_matches.png  used on input line 25
+0.
+(pdftex.def)             Requested size: 202.58038pt x 120.71298pt.
+<../outputs/q4_AECC3_matches.png, id=57, 4606.20876pt x 2741.24126pt>
+File: ../outputs/q4_AECC3_matches.png Graphic file (type png)
+<use ../outputs/q4_AECC3_matches.png>
+Package pdftex.def Info: ../outputs/q4_AECC3_matches.png  used on input line 25
+5.
+(pdftex.def)             Requested size: 202.58038pt x 120.54807pt.
+<../outputs/q4_AECC4_matches.png, id=58, 4600.18625pt x 2741.24126pt>
+File: ../outputs/q4_AECC4_matches.png Graphic file (type png)
+<use ../outputs/q4_AECC4_matches.png>
+Package pdftex.def Info: ../outputs/q4_AECC4_matches.png  used on input line 26
+0.
+(pdftex.def)             Requested size: 202.58038pt x 120.71538pt.
+<../outputs/q4_AECC2_difference.png, id=59, 2310.6325pt x 2740.2375pt>
 File: ../outputs/q4_AECC2_difference.png Graphic file (type png)
 <use ../outputs/q4_AECC2_difference.png>
 Package pdftex.def Info: ../outputs/q4_AECC2_difference.png  used on input line
- 235.
+ 309.
 (pdftex.def)             Requested size: 162.0705pt x 192.17072pt.
 
-Underfull \hbox (badness 4940) in paragraph at lines 236--236
-[]\OT1/cmr/m/n/10 Figure 4: |Dif-fer-ence im-age for
+Underfull \hbox (badness 4940) in paragraph at lines 310--310
+[]\OT1/cmr/m/n/10 Figure 8: |Dif-fer-ence im-age for
  []
 
-<../outputs/q4_AECC3_difference.png, id=58, 2310.6325pt x 2740.2375pt>
+<../outputs/q4_AECC3_difference.png, id=60, 2310.6325pt x 2740.2375pt>
 File: ../outputs/q4_AECC3_difference.png Graphic file (type png)
 <use ../outputs/q4_AECC3_difference.png>
 Package pdftex.def Info: ../outputs/q4_AECC3_difference.png  used on input line
- 242.
+ 316.
 (pdftex.def)             Requested size: 162.0705pt x 192.17072pt.
 
-Underfull \hbox (badness 4940) in paragraph at lines 243--243
-[]\OT1/cmr/m/n/10 Figure 5: |Dif-fer-ence im-age for
+Underfull \hbox (badness 4940) in paragraph at lines 317--317
+[]\OT1/cmr/m/n/10 Figure 9: |Dif-fer-ence im-age for
  []
 
-<../outputs/q4_AECC4_difference.png, id=59, 2310.6325pt x 2740.2375pt>
+<../outputs/q4_AECC4_difference.png, id=61, 2310.6325pt x 2740.2375pt>
 File: ../outputs/q4_AECC4_difference.png Graphic file (type png)
 <use ../outputs/q4_AECC4_difference.png>
 Package pdftex.def Info: ../outputs/q4_AECC4_difference.png  used on input line
- 249.
+ 323.
 (pdftex.def)             Requested size: 162.0705pt x 192.17072pt.
 
-Underfull \hbox (badness 4940) in paragraph at lines 250--250
-[]\OT1/cmr/m/n/10 Figure 6: |Dif-fer-ence im-age for
+Underfull \hbox (badness 2894) in paragraph at lines 324--324
+[]\OT1/cmr/m/n/10 Figure 10: |Dif-fer-ence im-age for
  []
 
-[3 <../outputs/q4_AECC2_difference.png (PNG copy)> <../outputs/q4_AECC3_differe
-nce.png (PNG copy)> <../outputs/q4_AECC4_difference.png (PNG copy)>]
-(230585C_a02.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--327
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--327
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--327
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--327
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--327
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--327
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--327
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--327
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--327
+
+ []
+
+[3 <../outputs/q4_AECC2_matches.png (PNG copy)> <../outputs/q4_AECC3_matches.pn
+g (PNG copy)> <../outputs/q4_AECC4_matches.png (PNG copy)> <../outputs/q4_AECC2
+_difference.png (PNG copy)> <../outputs/q4_AECC3_difference.png (PNG copy)> <..
+/outputs/q4_AECC4_difference.png (PNG copy)>] [4] (230585C_a02.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
@@ -544,13 +614,13 @@ Package rerunfilecheck Info: File `230585C_a02.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 13480 strings out of 467510
- 212037 string characters out of 5408795
+ 13516 strings out of 467510
+ 213255 string characters out of 5408795
  882199 words of memory out of 5000000
- 42560 multiletter control sequences out of 15000+600000
+ 42594 multiletter control sequences out of 15000+600000
  632472 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,8n,79p,458b,1293s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 74i,9n,79p,578b,1293s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/umain/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb><C:/Users/umain/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmbx12.pfb><C:/Users/umain/AppData/Local/Programs/MiKTeX/fonts/type1/p
@@ -566,9 +636,9 @@ r9.pfb><C:/Users/umain/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
 s/cm/cmsy10.pfb><C:/Users/umain/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/amsfonts/cm/cmtt10.pfb><C:/Users/umain/AppData/Local/Programs/MiKTeX/fonts/ty
 pe1/public/amsfonts/cm/cmtt8.pfb>
-Output written on 230585C_a02.pdf (3 pages, 27580561 bytes).
+Output written on 230585C_a02.pdf (4 pages, 70566181 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
- 26 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 134 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

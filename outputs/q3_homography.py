@@ -15,10 +15,10 @@ IMAGE_DIR = PROJECT_DIR / "images"
 OUTPUT_DIR = PROJECT_DIR / "outputs"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-flag = cv2.imread(str(IMAGE_DIR / "flag.png"), cv2.IMREAD_COLOR)
-scene = cv2.imread(str(IMAGE_DIR / "wadham.jpg"), cv2.IMREAD_COLOR)
+flag = cv2.imread(str(IMAGE_DIR / "ghana.png"), cv2.IMREAD_COLOR)
+scene = cv2.imread(str(IMAGE_DIR / "colosseum.jpg"), cv2.IMREAD_COLOR)
 if flag is None or scene is None:
-    raise FileNotFoundError("Expected flag.png and wadham.jpg in a2images/a2images")
+    raise FileNotFoundError("Expected flag.png and colosseum.jpg in images/images")
 
 fh, fw = flag.shape[:2]
 # The four corners of the source flag.
@@ -53,8 +53,8 @@ mask = cv2.warpPerspective(mask_src, H, (w, h))
 # Use the warped flag only inside its projected quadrilateral.
 result = scene.copy()
 result[mask > 0] = warped[mask > 0]
-cv2.imwrite(str(OUTPUT_DIR / "q3_flag_composite.png"), result)
-cv2.imwrite(str(OUTPUT_DIR / "q3_warped_flag.png"), warped)
-np.savetxt(OUTPUT_DIR / "q3_homography.txt", H, fmt="%.8f")
-print("Saved q3_flag_composite.png, q3_warped_flag.png, q3_homography.txt")
+cv2.imwrite(str(OUTPUT_DIR / "q3_ghana_composite.png"), result)
+cv2.imwrite(str(OUTPUT_DIR / "q3_warped_ghana.png"), warped)
+np.savetxt(OUTPUT_DIR / "q3_homography_colosseum.txt", H, fmt="%.8f")
+print("Saved q3_ghana_composite.png, q3_warped_ghana.png, q3_homography_colosseum.txt")
 print("Homography matrix:\n", H)

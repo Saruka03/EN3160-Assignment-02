@@ -167,17 +167,25 @@ circle_inliers = radial_error < 1.2
 
 \section*{3. Homography and Image Compositing}
 
-\begin{wrapfigure}{r}{0.43\textwidth}
+\begin{wrapfigure}[24]{r}{0.43\textwidth}
     \vspace{-10pt}
-    \includegraphics[width=0.30\textwidth]
+    \captionsetup{font=scriptsize}
+    \centering
+    \includegraphics[width=0.40\textwidth]
     {../outputs/q3_flag_composite.png}
-    \caption{Architectural image with the British flag superimposed.}
+    \captionof{figure}{Architectural image with the British flag superimposed.}
     \label{fig:q3-composite}
     \vspace{4pt}
-    \includegraphics[width=0.3\textwidth]
+    \includegraphics[width=0.40\textwidth]
     {../outputs/q3_warped_flag.png}
     \captionof{figure}{Flag after perspective warping.}
     \label{fig:q3-warped}
+    \vspace{4pt}
+    \includegraphics[width=0.40\textwidth]
+    {../outputs/q3_ghana_composite.png}
+    \captionof{figure}{Ghana flag projected onto the Colosseum image using
+    homography-based image compositing.}
+    \label{fig:q3-ghana}
     \vspace{-10pt}
 \end{wrapfigure}
 
@@ -198,7 +206,62 @@ The flag image was warped using this matrix and composited with the original arc
 
 The results demonstrate that a homography can map an image onto a selected planar region in another image. The alignment depends on the accuracy of the selected corner points. Although the flag is successfully projected onto the building, the result does not reproduce the surface texture, lighting, or shadows of the architecture.
 
+
+\textbf{Second Image Pair: Ghana Flag on the Colosseum}
+
+A second image pair was used to evaluate the homography-based image
+compositing process. The Ghana flag was projected onto a selected
+planar region of the Colosseum image by manually selecting four corner
+points and estimating the homography matrix.
+
+The estimated homography matrix was
+
+\begin{flushleft}
+$
+H_2 =
+\begin{bmatrix}
+0.765290 & -0.033121 & 464.000000\\
+-0.007817 & 0.428728 & 201.000000\\
+-0.0000389 & -0.0000384 & 1.000000
+\end{bmatrix}.
+$
+\end{flushleft}
+
+\noindent
+\begin{minipage}[t]{0.54\textwidth}
+    \raggedright
+    The resulting composite demonstrates that a homography can transform
+    a source image to fit a selected planar region in a background image.
+    The quality of the result depends on the accuracy of the selected
+    corner points and the perspective of the target surface.
+\end{minipage}
+
+% ASSIGNMENT REQUIREMENT: add a second image pair and its generated composite here.
+% The current project outputs contain only the documented flag/building composite;
+% do not claim a second pair until its homography and composite have been generated.
+\newpage
 \section*{4. PCB Image Alignment and Difference Calculation}
+
+\begin{wrapfigure}{r}{0.43\textwidth}
+    \vspace{-10pt}
+    \captionsetup{font=scriptsize}
+    \centering
+    \includegraphics[width=0.40\textwidth]
+    {../outputs/q4_AECC2_matches.png}
+    \captionof{figure}{AECC2 matched to AECC1.}
+    \label{fig:q4-match2}
+    \vspace{4pt}
+    \includegraphics[width=0.40\textwidth]
+    {../outputs/q4_AECC3_matches.png}
+    \captionof{figure}{AECC3 matched to AECC1.}
+    \label{fig:q4-match3}
+    \vspace{4pt}
+    \includegraphics[width=0.40\textwidth]
+    {../outputs/q4_AECC4_matches.png}
+    \captionof{figure}{AECC4 matched to AECC1.}
+    \label{fig:q4-match4}
+    \vspace{-10pt}
+\end{wrapfigure}
 
 The PCB images AECC2, AECC3, and AECC4 were aligned with the reference template AECC1.jpg using SIFT feature detection, feature matching, and RANSAC-based homography estimation. The aligned images were then compared with the reference template using absolute pixel differences.
 
@@ -207,8 +270,7 @@ The PCB images AECC2, AECC3, and AECC4 were aligned with the reference template 
 The numbers of detected keypoints, good feature matches, and RANSAC inliers are summarized below.
 
 \begin{table}[H]
-\centering
-\captionsetup{justification=centering,singlelinecheck=true}
+\raggedright
 \caption{Feature matching and RANSAC results}
 \begin{tabular}{lrrr}
 \hline
@@ -223,10 +285,22 @@ AECC4 & 11610 & 3830 & 3402 \\
 
 The RANSAC inlier ratios were approximately 89\% for all three images. This indicates that most of the selected feature matches were consistent with their estimated homography transformations.
 
+\textbf{Feature Matching}
+
+Figure 8 shows the SIFT feature correspondences used to estimate the homographies. RANSAC rejects inconsistent matches and retains geometrically consistent correspondences for alignment.
+
 \textbf{Difference Images}
 
 The aligned images were compared with the reference template to obtain absolute difference images.
-
+\newline
+\newline
+\newline
+\newline
+\newline
+\newline
+\newline
+\newline
+\newline
 \begin{figure}[H]
     \centering
     \begin{minipage}[t]{0.32\textwidth}
@@ -252,10 +326,13 @@ The aligned images were compared with the reference template to obtain absolute 
     \end{minipage}
 \end{figure}
 
+\newpage
 \textbf{Discussion}
 
 The difference images show residual edges and component details after perspective alignment. These differences may result from small alignment errors, variations in component positions, changes in illumination, or differences between the PCB images. A high difference around a component may indicate that its appearance or position differs from the reference, although it does not by itself establish a physical defect.
 
 All three images produced high RANSAC inlier ratios, indicating that reliable feature correspondences were available for estimating the transformations. However, the inlier ratio measures geometric agreement between matched features rather than the overall pixel similarity of the aligned images.
+
+The USB Type B port, capacitors, and reset button can show high differences because their positions, shapes, or appearances may vary relative to the reference template. Small residual alignment errors can also create strong responses around component boundaries. Differences in illumination, reflections, shadows, and image acquisition conditions may contribute as well. Therefore, a high pixel difference alone does not prove that a component is defective; it should be interpreted alongside the aligned image and the expected PCB layout.
 
 \end{document}
