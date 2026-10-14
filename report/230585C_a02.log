@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.4)  13 OCT 2026 16:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.4)  14 OCT 2026 18:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -367,7 +367,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip54
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 17.
+Package hyperref Info: Option `colorlinks' set `true' on input line 26.
 
 (C:\Users\umain\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
@@ -379,24 +379,24 @@ File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
 ) (230585C_a02.aux)
 \openout1 = `230585C_a02.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -463,142 +463,122 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count334
-Package hyperref Info: Link coloring ON on input line 28.
+Package hyperref Info: Link coloring ON on input line 43.
  (230585C_a02.out) (230585C_a02.out)
 \@outlinefile=\write3
 \openout3 = `230585C_a02.out'.
 
-<../outputs/q1_sunflowers_plot.png, id=4, 555.39494pt x 570.57166pt>
-File: ../outputs/q1_sunflowers_plot.png Graphic file (type png)
-<use ../outputs/q1_sunflowers_plot.png>
-Package pdftex.def Info: ../outputs/q1_sunflowers_plot.png  used on input line 
-47.
+<../outputs/q1_sunflowers_tuned_plot.png, id=4, 555.39494pt x 570.57166pt>
+File: ../outputs/q1_sunflowers_tuned_plot.png Graphic file (type png)
+<use ../outputs/q1_sunflowers_tuned_plot.png>
+Package pdftex.def Info: ../outputs/q1_sunflowers_tuned_plot.png  used on input
+ line 61.
 (pdftex.def)             Requested size: 192.45677pt x 197.70934pt.
+
+
+Package wrapfig Warning: Collision between wrapping environments on input line 
+95.
+
 <../outputs/q2_ransac_line_circle.png, id=7, 693.43065pt x 715.11165pt>
 File: ../outputs/q2_ransac_line_circle.png Graphic file (type png)
 <use ../outputs/q2_ransac_line_circle.png>
 Package pdftex.def Info: ../outputs/q2_ransac_line_circle.png  used on input li
-ne 105.
+ne 99.
 (pdftex.def)             Requested size: 232.9744pt x 240.25404pt.
- [1
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 10
+5.
+
+[1
 
 {C:/Users/umain/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <../outputs/q
-1_sunflowers_plot.png> <../outputs/q2_ransac_line_circle.png>]
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <7> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 158.
+1_sunflowers_tuned_plot.png> <../outputs/q2_ransac_line_circle.png>]
 <../outputs/q3_flag_composite.png, id=29, 1027.84pt x 770.88pt>
 File: ../outputs/q3_flag_composite.png Graphic file (type png)
 <use ../outputs/q3_flag_composite.png>
 Package pdftex.def Info: ../outputs/q3_flag_composite.png  used on input line 1
-75.
+52.
 (pdftex.def)             Requested size: 202.58038pt x 151.92659pt.
 <../outputs/q3_warped_flag.png, id=30, 1027.84pt x 770.88pt>
 File: ../outputs/q3_warped_flag.png Graphic file (type png)
 <use ../outputs/q3_warped_flag.png>
-Package pdftex.def Info: ../outputs/q3_warped_flag.png  used on input line 180.
+Package pdftex.def Info: ../outputs/q3_warped_flag.png  used on input line 157.
 
 (pdftex.def)             Requested size: 202.58038pt x 151.92659pt.
 <../outputs/q3_ghana_composite.png, id=31, 1284.8pt x 684.5575pt>
 File: ../outputs/q3_ghana_composite.png Graphic file (type png)
 <use ../outputs/q3_ghana_composite.png>
 Package pdftex.def Info: ../outputs/q3_ghana_composite.png  used on input line 
-185.
+162.
 (pdftex.def)             Requested size: 202.58038pt x 107.93327pt.
  [2 <../outputs/q3_flag_composite.png (PNG copy)> <../outputs/q3_warped_flag.pn
 g (PNG copy)> <../outputs/q3_ghana_composite.png (PNG copy)>]
-<../outputs/q4_AECC2_matches.png, id=56, 4598.17876pt x 2740.2375pt>
+
+Package wrapfig Warning: Collision between wrapping environments on input line 
+213.
+
+<../outputs/q4_AECC2_matches.png, id=55, 4598.17876pt x 2740.2375pt>
 File: ../outputs/q4_AECC2_matches.png Graphic file (type png)
 <use ../outputs/q4_AECC2_matches.png>
-Package pdftex.def Info: ../outputs/q4_AECC2_matches.png  used on input line 25
-0.
+Package pdftex.def Info: ../outputs/q4_AECC2_matches.png  used on input line 21
+8.
 (pdftex.def)             Requested size: 202.58038pt x 120.71298pt.
-<../outputs/q4_AECC3_matches.png, id=57, 4606.20876pt x 2741.24126pt>
+<../outputs/q4_AECC3_matches.png, id=56, 4606.20876pt x 2741.24126pt>
 File: ../outputs/q4_AECC3_matches.png Graphic file (type png)
 <use ../outputs/q4_AECC3_matches.png>
-Package pdftex.def Info: ../outputs/q4_AECC3_matches.png  used on input line 25
-5.
+Package pdftex.def Info: ../outputs/q4_AECC3_matches.png  used on input line 22
+3.
 (pdftex.def)             Requested size: 202.58038pt x 120.54807pt.
-<../outputs/q4_AECC4_matches.png, id=58, 4600.18625pt x 2741.24126pt>
+<../outputs/q4_AECC4_matches.png, id=57, 4600.18625pt x 2741.24126pt>
 File: ../outputs/q4_AECC4_matches.png Graphic file (type png)
 <use ../outputs/q4_AECC4_matches.png>
-Package pdftex.def Info: ../outputs/q4_AECC4_matches.png  used on input line 26
-0.
+Package pdftex.def Info: ../outputs/q4_AECC4_matches.png  used on input line 22
+8.
 (pdftex.def)             Requested size: 202.58038pt x 120.71538pt.
-<../outputs/q4_AECC2_difference.png, id=59, 2310.6325pt x 2740.2375pt>
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 23
+4.
+
+<../outputs/q4_AECC2_difference.png, id=61, 2310.6325pt x 2740.2375pt>
 File: ../outputs/q4_AECC2_difference.png Graphic file (type png)
 <use ../outputs/q4_AECC2_difference.png>
 Package pdftex.def Info: ../outputs/q4_AECC2_difference.png  used on input line
- 309.
+ 270.
 (pdftex.def)             Requested size: 162.0705pt x 192.17072pt.
 
-Underfull \hbox (badness 4940) in paragraph at lines 310--310
+Underfull \hbox (badness 4940) in paragraph at lines 271--271
 []\OT1/cmr/m/n/10 Figure 8: |Dif-fer-ence im-age for
  []
 
-<../outputs/q4_AECC3_difference.png, id=60, 2310.6325pt x 2740.2375pt>
+<../outputs/q4_AECC3_difference.png, id=62, 2310.6325pt x 2740.2375pt>
 File: ../outputs/q4_AECC3_difference.png Graphic file (type png)
 <use ../outputs/q4_AECC3_difference.png>
 Package pdftex.def Info: ../outputs/q4_AECC3_difference.png  used on input line
- 316.
+ 277.
 (pdftex.def)             Requested size: 162.0705pt x 192.17072pt.
 
-Underfull \hbox (badness 4940) in paragraph at lines 317--317
+Underfull \hbox (badness 4940) in paragraph at lines 278--278
 []\OT1/cmr/m/n/10 Figure 9: |Dif-fer-ence im-age for
  []
 
-<../outputs/q4_AECC4_difference.png, id=61, 2310.6325pt x 2740.2375pt>
+<../outputs/q4_AECC4_difference.png, id=63, 2310.6325pt x 2740.2375pt>
 File: ../outputs/q4_AECC4_difference.png Graphic file (type png)
 <use ../outputs/q4_AECC4_difference.png>
 Package pdftex.def Info: ../outputs/q4_AECC4_difference.png  used on input line
- 323.
+ 284.
 (pdftex.def)             Requested size: 162.0705pt x 192.17072pt.
 
-Underfull \hbox (badness 2894) in paragraph at lines 324--324
+Underfull \hbox (badness 2894) in paragraph at lines 285--285
 []\OT1/cmr/m/n/10 Figure 10: |Dif-fer-ence im-age for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 294--327
+Underfull \hbox (badness 10000) in paragraph at lines 262--288
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 294--327
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 294--327
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 294--327
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 294--327
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 294--327
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 294--327
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 294--327
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 294--327
+Underfull \hbox (badness 10000) in paragraph at lines 262--288
 
  []
 
@@ -610,35 +590,38 @@ _difference.png (PNG copy)> <../outputs/q4_AECC3_difference.png (PNG copy)> <..
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `230585C_a02.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 13516 strings out of 467510
- 213255 string characters out of 5408795
- 882199 words of memory out of 5000000
- 42594 multiletter control sequences out of 15000+600000
- 632472 words of font info for 58 fonts, out of 8000000 for 9000
+ 13521 strings out of 467510
+ 213388 string characters out of 5408795
+ 884983 words of memory out of 5000000
+ 42600 multiletter control sequences out of 15000+600000
+ 632304 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,9n,79p,578b,1293s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 74i,9n,79p,763b,1275s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/umain/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb><C:/Users/umain/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmbx12.pfb><C:/Users/umain/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmex10.pfb><C:/Users/umain/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmitt10.pfb><C:/Users/umain/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/umain/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/umain/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/umain
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Use
-rs/umain/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-<C:/Users/umain/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-r9.pfb><C:/Users/umain/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb><C:/Users/umain/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmtt10.pfb><C:/Users/umain/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmtt8.pfb>
-Output written on 230585C_a02.pdf (4 pages, 70566181 bytes).
+s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/umain/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/umain/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/umain/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/umain/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/
+umain/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:
+/Users/umain/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb><C:/Users/umain/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmtt10.pfb><C:/Users/umain/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmtt8.pfb>
+Output written on 230585C_a02.pdf (4 pages, 70567080 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
+ 132 PDF objects out of 1000 (max. 8388607)
  28 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

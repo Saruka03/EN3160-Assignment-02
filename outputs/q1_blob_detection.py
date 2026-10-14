@@ -12,12 +12,12 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # Parameters to tune after inspecting the output.
 SIGMA_MIN = 2.2
-SIGMA_MAX = 12.0
-NUMBER_OF_SCALES = 20
+SIGMA_MAX = 30.0          # Wider search to check larger flower blobs.
+NUMBER_OF_SCALES = 32       # More scales improve sampling across the wider range.
 FIELD_START_ROW = 170
-RESPONSE_THRESHOLD_FRACTION = 0.12
+RESPONSE_THRESHOLD_FRACTION = 0.16  # Test a stricter threshold to reduce weak background responses.
 MIN_SIGMA = 2.9              # Discard very small texture responses.
-MIN_CENTER_DISTANCE = 10.0   # Suppress detections near stronger detections.
+MIN_CENTER_DISTANCE = 14.0   # Stronger suppression to reduce nearby duplicate detections.
 
 im = cv2.imread(str(IMAGE_PATH), cv2.IMREAD_REDUCED_COLOR_4)
 if im is None:
@@ -39,6 +39,7 @@ for sigma in sigmas:
 scale_space = np.stack(responses, axis=0)
 print(f"Sigma range tested: {sigmas[0]:.2f} to {sigmas[-1]:.2f}")
 print("Number of scales:", len(sigmas))
+print("Scale step:", f"{sigmas[1] - sigmas[0]:.3f}" if len(sigmas) > 1 else "N/A")
 
 # Restrict detections to the sunflower field, excluding most of the sky.
 field_mask = np.zeros_like(gray, dtype=bool)
@@ -93,6 +94,38 @@ print("Minimum sigma retained:", MIN_SIGMA)
 print("Minimum center distance:", MIN_CENTER_DISTANCE)
 print("Detections before spatial suppression:", len(candidates))
 print("Detections after spatial suppression:", len(detections))
+
+# Report detections across scales. Boundary counts are a diagnostic, not proof
+# that the scale range is optimal; inspect the image for missed large flowers.
+if len(detections):
+    print("Detections by sigma:")
+    unique_sigmas, sigma_counts = np.unique(detections[:, 3], return_counts=True)
+    for sigma_value, count in zip(unique_sigmas, sigma_counts):
+        print(f"  sigma={sigma_value:.2f}: {count}")
+
+    largest_scale_count = int(np.count_nonzero(
+        np.isclose(detections[:, 3], sigmas[-1])
+    ))
+    largest_scale_fraction = largest_scale_count / len(detections)
+    print(
+        f"Detections at largest tested sigma ({sigmas[-1]:.2f}): "
+        f"{largest_scale_count}/{len(detections)} "
+        f"({largest_scale_fraction:.1%})"
+    )
+    if largest_scale_fraction >= 0.10:
+        print(
+            "NOTE: At least 10% of retained detections are at the upper scale "
+            "limit. Consider increasing SIGMA_MAX and rerunning to check for "
+            "scale-boundary truncation."
+        )
+    else:
+        print(
+            "Upper-scale diagnostic: fewer than 10% of retained detections "
+            "are at the largest tested scale; inspect the scale distribution "
+            "and image before concluding the range is sufficient."
+        )
+else:
+    print("No detections retained; consider reviewing the threshold and masks.")
 print("Top detections:")
 for x, y, radius, sigma, strength in detections[:20]:
     print(
@@ -100,9 +133,9 @@ for x, y, radius, sigma, strength in detections[:20]:
         f"sigma={sigma:.2f}, response={strength:.5f}"
     )
 
-result_path = OUTPUT_DIR / "q1_sunflowers.png"
-plot_path = OUTPUT_DIR / "q1_sunflowers_plot.png"
-csv_path = OUTPUT_DIR / "q1_detections.csv"
+result_path = OUTPUT_DIR / "q1_sunflowers_tuned.png"
+plot_path = OUTPUT_DIR / "q1_sunflowers_tuned_plot.png"
+csv_path = OUTPUT_DIR / "q1_detections_tuned.csv"
 
 if not cv2.imwrite(str(result_path), result):
     raise OSError(f"Could not save image to {result_path}")
@@ -126,3 +159,5 @@ plt.show()
 
 print("Saved image:", result_path)
 print("Saved plot:", plot_path)
+print("\\nTuning note: compare this output with your previous plot. Keep these settings only "
+      "if visual inspection shows fewer false positives without losing too many real flowers.")
