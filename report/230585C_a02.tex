@@ -118,13 +118,13 @@ The estimated circle centre and radius were
 \[
 (c_x,c_y)=(1.969390,\;2.942512),\qquad r=9.907175.
 \]
-The circle contained 44 inliers. These estimates are close to the ground-truth centre $(2,3)$ and radius $10$.
+The circle contained 44 inliers. Relative to the ground truth $(2,3)$ and $r=10$, the centre-coordinate errors are $|1.969390-2|=0.030610$ and $|2.942512-3|=0.057488$; the radius error is $|9.907175-10|=0.092825$ pixels. These small errors indicate a close fit for this noisy point set.
 
 The plot shows the best sample models, refined models, ground truth models, line/circle inliers, and the 3-point minimal sample for circle estimation. Some points may be assigned to the wrong model due to noise and spatial overlap.
 
 \reportsubsection{What if the circle were fitted first?}
 
-Fitting the circle first is significantly more sensitive to noise and outliers. Because circles possess 3 degrees of freedom (centre $x,y$ and radius $r$), sampling 3 points from a combined line-and-circle point cloud often forms spurious candidate circles whose arcs align locally with the straight line or tangent points. This leads to false consensus consensus subsets containing line points. Fitting the 2-DOF line first ($ax+by=d$) isolates the dominant linear structure reliably before fitting the 3-DOF circle to residual points.
+Fitting the circle first is significantly more sensitive to noise and outliers. Because circles possess 3 degrees of freedom (centre $x,y$ and radius $r$), sampling 3 points from a combined line-and-circle point cloud often forms spurious candidate circles whose arcs align locally with the straight line or tangent points. This can produce false consensus sets containing points from the line. Fitting the 2-DOF line first ($ax+by=d$) isolates the dominant linear structure reliably before fitting the 3-DOF circle to residual points.
 
 \reportsubsection{Important implementation details}
 
@@ -204,10 +204,9 @@ $
 \noindent
 \begin{minipage}[t]{0.54\textwidth}
     \raggedright
-    The resulting composite demonstrates that a planar homography effectively maps source textures onto local planar approximations of complex architectural structures, subject to corner selection accuracy and lighting disparities.
+    The resulting composite demonstrates that a homography can project the flag onto the selected image region. Since the Colosseum facade is three-dimensional and curved, one homography only approximates the selected region as planar; it cannot model depth changes across the entire monument. The visual result also depends on corner selection, occlusion, and differences in lighting and surface appearance.
 \end{minipage}
 
-\newpage
 \reportsection{4. PCB Image Alignment and Difference Calculation}
 
 \begin{wrapfigure}{r}{0.43\textwidth}
@@ -259,9 +258,8 @@ Figures~\ref{fig:q4-match2}, \ref{fig:q4-match3}, and \ref{fig:q4-match4} show t
 
 \textbf{Difference Images}
 
-The aligned images were compared with the reference template to obtain absolute difference maps $|I_1 - I_2|$, which were dynamic-range scaled using \texttt{cv2.normalize} to enhance subtle structural intensity residual visibility.
-\newline
-\newline
+The aligned images were compared with the reference template to obtain absolute difference maps $|I_1 - I_2|$, which were contrast-normalized for visualization. Normalization improves visibility but changes the displayed intensity scale, so it should not be interpreted as a calibrated measure of defect severity.
+\par
 \begin{figure}[H]
     \centering
     \begin{minipage}[t]{0.32\textwidth}
@@ -290,10 +288,10 @@ The aligned images were compared with the reference template to obtain absolute 
 
 \textbf{Discussion}
 
-The difference images show residual edges and component details after perspective alignment. These differences may result from small alignment errors, variations in component positions, changes in illumination, or differences between the PCB images. A high difference around a component may indicate that its appearance or position differs from the reference, although it does not by itself establish a physical defect.
+The difference images show residual edges and component details after perspective alignment. For readability, the enhanced grayscale differences should be used when the raw absolute-difference images appear nearly black; the raw images preserve the original pixel-difference scale. These differences may result from small alignment errors, variations in component positions, changes in illumination, or differences between the PCB images. A high difference around a component may indicate that its appearance or position differs from the reference, although it does not by itself establish a physical defect.
 
 All three images produced high RANSAC inlier ratios, indicating that reliable feature correspondences were available for estimating the transformations. However, the inlier ratio measures geometric agreement between matched planar features rather than the overall 3D pixel similarity of the aligned images.
 
-The USB Type B port, metallic capacitors, and reset button exhibit elevated differences primarily due to 3D parallax effects and specular reflections. Because a 2D planar homography ($3 \times 3$ matrix) assumes all points lie on a single 2D plane, tall 3D components experience out-of-plane perspective distortion and height relief parallax when viewed from slightly different camera viewpoints. Additionally, shiny metallic housings (e.g., USB shell, capacitor tops) create strong specular highlights and shadow shifts under varying lighting directions. Therefore, a high pixel difference alone does not prove that a component is defective; it should be interpreted alongside the aligned image and the expected PCB layout.
+Elevated differences around the USB Type B port, metallic capacitors, and reset button can arise from 3D parallax effects and specular reflections. Because a 2D planar homography ($3 \times 3$ matrix) assumes all points lie on a single 2D plane, tall 3D components experience out-of-plane perspective distortion and height relief parallax when viewed from slightly different camera viewpoints. Additionally, shiny metallic housings (e.g., USB shell, capacitor tops) create strong specular highlights and shadow shifts under varying lighting directions. Therefore, a high pixel difference alone does not prove that a component is defective; it should be interpreted alongside the aligned image and the expected PCB layout.
 
 \end{document}
